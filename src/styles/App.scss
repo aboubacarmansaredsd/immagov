@@ -1,0 +1,55 @@
+@import "colors";
+@import "fonts";
+@import "mixins";
+
+* {
+  font-family: $inter;
+}
+
+.App {
+  position: relative;
+}
+
+.page {
+  width: 90%;
+  height: 100%;
+  min-height: 100vh;
+  margin: 2em auto;
+}
+
+input[type="text"],
+input[type="password"] {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid $dark-grey;
+  width: 100%;
+  padding: 0.5em 0;
+  color: $darker-grey;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+.link-active {
+  color: $primary-green;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: $black;
+  color: $white;
+  padding: 1em 2em;
+  font-weight: 500;
+  font-size: 0.8rem;
+  &.primary {
+    background-color: $primary-green;
+  }
+}
+
+@import "../pages/Login/Login";
+@import "../pages/Dashboard/Dashboard";
+@import "../components/Navbar/Navbar";
+@import "../components/MobileNav/MobileNav";

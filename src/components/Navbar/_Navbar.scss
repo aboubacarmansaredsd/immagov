@@ -1,0 +1,89 @@
+.Navbar {
+  main {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1.5em 0;
+    border-bottom: 1px solid $light-grey;
+  }
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left {
+      display: flex;
+      align-items: center;
+      .hamburger-menu {
+        position: relative;
+        z-index: 3;
+        font-size: 2em;
+        display: none;
+        cursor: pointer;
+        transform: translateY(3px);
+        @include desktop() {
+          display: block;
+        }
+      }
+      .logo {
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-right: 1.5em;
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 1em;
+        @include desktop() {
+          display: none;
+        }
+        li {
+          font-size: 0.85rem;
+          font-weight: 500;
+          cursor: pointer;
+          transition: color 0.1s ease;
+          &:hover {
+            color: $primary-green;
+          }
+        }
+      }
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+      .avatar {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        .user-info {
+          display: flex;
+          flex-direction: column;
+          text-align: right;
+          @media screen and (max-width: 450px) {
+            display: none;
+          }
+          .name {
+            font-size: 0.8rem;
+            color: $darker-grey;
+          }
+          .role {
+            font-size: 0.7rem;
+            font-weight: 700;
+          }
+        }
+        .user-icon {
+          font-size: 1.8em;
+        }
+      }
+      .separator {
+        background-color: $dark-grey;
+        width: 2px;
+        height: 25px;
+      }
+      .logout {
+        font-size: 1.5em;
+        cursor: pointer;
+      }
+    }
+  }
+}
